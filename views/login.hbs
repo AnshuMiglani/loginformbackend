@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/01ab4199c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{>header}}
+    <main>
+    <div class="overlay">
+<!-- LOGN IN FORM by Omar Dsoky -->
+<form action="/login" method="post">
+   <!--   con = Container  for items in the form-->
+   <div class="con">
+   <!--     Start  header Content  -->
+   <header class="head-form">
+      <h2>Log In</h2>
+      <!--     A welcome message or an explanation of the login form -->
+      <p>login here using your email and password</p>
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set">
+     
+      <!--   user name -->
+         <span class="input-item">
+           <i class="fa fa-user-circle"></i>
+         </span>
+        <!--   user name Input-->
+         <input class="form-input" id="txt-input" type="text" name="email" placeholder="@email" required>
+     
+      <br>
+     
+           <!--   Password -->
+     
+      <span class="input-item">
+        <i class="fa fa-key"></i>
+       </span>
+      <!--   Password Input-->
+      <input class="form-input" type="password" placeholder="Password" id="pwd"  name="password" required>
+     
+<!--      Show/hide password  -->
+     <span>
+        <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
+     </span>
+     
+     
+      <br>
+<!--        buttons -->
+<!--      button LogIn -->
+      <button class="log-in"> Log In </button>
+   </div>
+  
+<!--   other buttons -->
+
+     
+<!--   End Conrainer  -->
+  </div>
+  
+  <!-- End Form -->
+</form>
+</div>
+   <div class="other">
+<!--      Forgot Password button-->
+            <button class="btn submits frgt-pass">Forgot Password</button>
+<!--     Sign Up button -->
+      <a href="/register"><button class="btn submits sign-up">Sign Up 
+<!--         Sign Up font icon -->
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </button></a>
+<!--      End Other the Division -->
+   </div>
+</main>
+<script>
+    function show() {
+    var p = document.getElementById('pwd');
+    p.setAttribute('type', 'text');
+}
+
+function hide() {
+    var p = document.getElementById('pwd');
+    p.setAttribute('type', 'password');
+}
+
+var pwShown = 0;
+
+document.getElementById("eye").addEventListener("click", function () {
+    if (pwShown == 0) {
+        pwShown = 1;
+        show();
+    } else {
+        pwShown = 0;
+        hide();
+    }
+}, false);
+
+
+</script>
+</body>
+</html>

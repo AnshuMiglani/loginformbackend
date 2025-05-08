@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/01ab4199c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {{>header}}
+   <input type="checkbox" id="toggle" class="toggleCheckbox" />
+<label for="toggle" class='toggleContainer'>
+     <div><a href="/login" >Login</a></div>
+  <div><a href="/register">Registeration</a></div>
+ 
+</label>
+    <main class="reg_main">
+        <div class="reg_content">
+            <div class="reg_display">
+                <i class="fa-brands fa-space-awesome" style="color: white; font-size:3em;"></i>
+                <h1 style="color: white; scale:1.2">Welcome</h1>
+                <p style="color: white; text-align:center;">to the complete MERN <br>backend course</p>
+                <a href="/login"><button class="reg_button">Login</button></a>
+                
+            </div>
+            <form action="/register" method="post">
+            
+            <div class="reg_form">
+                
+                <h1 style="margin-bottom: 15px; color:rgb(20, 4, 51); font-weight:500;">Employee Registeration Form</h1>
+                <div><input class="inputfield" name="Firstname" type="text" placeholder="First Name*" style="margin-right:30px;" required> <input class="inputfield" name="Lastname" type="text" placeholder="Last Name*" required></div>
+                <div><input class="inputfield" name="Email" type="email" placeholder="Your email*" style="margin-left:-100px; margin-right:30px;" required><label class="radio_inline"> <input  type="radio" name="gender" value="male">  <span style="font-size: 1.3em; margin-right:10px;">Male</span></label>  <label class="radio_inline">    <input type="radio" name="gender" value="female">  <span style="font-size: 1.3em;">Female</span></div> </label>
+
+                <div><input class="inputfield" name="Phone" type="number" placeholder="Your Phone*" style="margin-right:30px;" required> <input class="inputfield" name="Age" type="number" placeholder="Enter Your age*" required></div>
+                <div style="margin-bottom: 50px;"><input class="inputfield" name="Password" type="password" placeholder="Password*"style="margin-right:30px;" required><input class="inputfield" name="ConfirmPassword" type="password" placeholder="Confirm Password*" required></div> 
+                <input type="submit" name="form_reg_button" class="form_reg_button" value="Register" >
+            </div>
+            
+            </form>            
+            </div>
+
+        </div>
+    </main>
+
+    
+</body>
+</html>
